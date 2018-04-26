@@ -148,6 +148,24 @@ function inspectorOnClick(e) {
 		// These are the default actions (the XPath code might be a bit janky)
 		// Really, these could do anything:
 		console.log( cssPath(e.target) );
+
+    //
+    //
+    //
+    // Path-xAPI post to create a new experience
+    var targetOfClickedElement = cssPath(e.target)
+    var valueOfClickedElement = $( targetOfClickedElement ).val()
+    $.post( "https://path-xapi.herokuapp.com/experiences/create", { name: valueOfClickedElement, verb: '{ "id" : "http://adlnet.gov/expapi/verbs/completed", "display" : {"de-DE" : "beendete", "en-US" : "completed", "fr-FR" : "a terminé", "es-ES" : "completó" } }' , target: targetOfClickedElement })
+      .done(function() {
+        console.log( "POST to /experiences/create done" );
+      })
+      .fail(function() {
+        console.log( "!! POST to /experiences/create failed" );
+      });
+    // end of Path-xAPI stuff
+    //
+    //
+    //
         return false;
     }
 function inspectorAddExp(e){
@@ -193,7 +211,6 @@ document.getElementById('object');
 		document.addEventListener("click", inspectorOnClick, true);
 		document.addEventListener("click", inspectorAddExp, true);
 		document.addEventListener("keydown", inspectorCancel, true);
-		el.addEventListener("click", inspectorCancel, true);
 	} else if ( document.attachEvent ) {
 		document.attachEvent("mouseover", inspectorMouseOver);
 		document.attachEvent("mouseout", inspectorMouseOut);

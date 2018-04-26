@@ -64,6 +64,7 @@ var v = ["Name", "Type", "Actor", "Verb"];
 v.forEach(function(el) {
     var inputss = document.createElement("input");
     inputss.placeholder = el;
+    inputss.value = 'Test ' + el ;
     inputss.id = 'pathvis_text';
     popoverInner.appendChild(inputss);
 });
