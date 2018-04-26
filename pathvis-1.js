@@ -47,7 +47,7 @@ function main() {
         css_link.appendTo('head');          
 
 var inspect_script = document.createElement('script');
-inspect_script.setAttribute('src','../inspector.source.js');
+inspect_script.setAttribute('src','../inspector.source.update.js');
 document.head.appendChild(inspect_script);
       
 
