@@ -1,0 +1,59 @@
+/* Form */
+.ant-form {
+  /* Your existing styles for ant-form */
+}
+
+.form__jH_wV {
+  /* Your existing styles for form__jH_wV */
+}
+
+/* Info Text Block */
+.info__f2IXh {
+  margin-bottom: 10px !important;
+}
+
+.textBlock__Z2e9e p {
+  font-family: inherit;
+  line-height: 1.6em;
+}
+
+.textBlock__Z2e9e span {
+  font-weight: bold;
+}
+
+/* Download Link */
+.download-link {
+  width: auto;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -.5px;
+  background-color: #0b7f95;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all .4s;
+  display: block;
+}
+
+.download-link:hover,
+.download-link:focus {
+  background-color: #086a75;
+  outline: 2px solid #fff;
+}
+
+/* Form Instructions */
+.form-instructions {
+  margin-top: 24px;
+  font-size: 1.1em;
+}
+
+/* Subheading */
+.subheading__yDime {
+  /* Your existing styles for subheading__yDime */
+}
